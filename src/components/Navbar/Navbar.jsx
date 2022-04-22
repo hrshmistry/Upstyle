@@ -11,9 +11,9 @@ const Navbar = () => {
     return (
         <nav>
             <div className='navigation'>
-                <Link to={"/"} className='brand'>Shopping Cart</Link>
+                <Link to={"/"} className='brand n-1'>Shopping Cart</Link>
                 <SearchBar />
-                <Link to={"/cart"} className='cart-container'>
+                <Link to={"/cart"} className='cart-container n-3'>
                     <ShoppingCart size={32} />
                     <div className='badge'>
                         <span>{cart.length}</span>

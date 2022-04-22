@@ -24,6 +24,9 @@ const CartProduct = ({ product }) => {
                     <small className="cart-content">
                         {product.shortDetail}
                     </small>
+                    <small className="cart-order-id">
+                        Order ID #{product.key.slice(0, 6)}
+                    </small>
                     <div className="cart-price">
                         <small>Rs.{product.prize} </small>
                         <small className="e-comm-price-cut">Rs.{product.prizeCut}</small>
