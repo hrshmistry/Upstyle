@@ -26,6 +26,10 @@ const Cart = () => {
                 )
                 : (
                     <>
+                        <div className="cart-info">
+                            <h3>Cart Items {cart.length}</h3>
+                            <h4>SubTotal Rs. {total}</h4>
+                        </div>
                         {cart.map((product) => {
                             return (<div key={product.key}>
                                 <CartProduct product={product} />

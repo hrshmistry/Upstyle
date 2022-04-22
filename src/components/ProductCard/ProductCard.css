@@ -108,6 +108,11 @@
     font-size: 0.7rem;
 }
 
+.cart-info {
+    color: #6B7280;
+    font-size: 1rem;
+}
+
 .e-comm-price {
     padding: 0.5rem 0.5rem 1rem ;
     font-size: 0.8rem;
