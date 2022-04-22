@@ -1,6 +1,11 @@
 nav {
     background-color: var(--primary-color);
     color: #FFF;
+    position: sticky;
+    top: 0;
+    z-index: 10;
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
 }
 
 .navigation {
@@ -59,4 +64,5 @@ nav {
 
 .badge span {
     font-size: small;
+    font-weight: bold;
 }

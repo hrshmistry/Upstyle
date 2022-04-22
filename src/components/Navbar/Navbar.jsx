@@ -3,8 +3,11 @@ import React from 'react'
 import { Link } from 'react-router-dom'
 import './Navbar.css'
 import SearchBar from '../SearchBar'
+import { CartState } from "../../context/Context";
 
 const Navbar = () => {
+    const { state: { cart } } = CartState();
+
     return (
         <nav>
             <div className='navigation'>
@@ -13,7 +16,7 @@ const Navbar = () => {
                 <Link to={"/cart"} className='cart-container'>
                     <ShoppingCart size={32} />
                     <div className='badge'>
-                        <span>5</span>
+                        <span>{cart.length}</span>
                     </div>
                 </Link>
             </div>
