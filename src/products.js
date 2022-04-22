@@ -1,8 +1,6 @@
-import { v4 as uuidv4 } from 'uuid';
-
 const products = [
     {
-        key: uuidv4(),
+        key: 101,
         imageSrc: "https://bit.ly/3owBG9K",
         imageAlt: "Anouk",
         title: "Anouk",
@@ -15,7 +13,7 @@ const products = [
         btnText: "Add to Cart",
     },
     {
-        key: uuidv4(),
+        key: 102,
         imageSrc: "https://bit.ly/2PKuPw0",
         imageAlt: "Kook N Keech",
         title: "Kook N Keech",
@@ -28,7 +26,7 @@ const products = [
         btnText: "Add to Cart",
     },
     {
-        key: uuidv4(),
+        key: 103,
         imageSrc: "https://bit.ly/3f3uFtU",
         imageAlt: "98 Degree North",
         title: "98 Degree North",
@@ -41,7 +39,7 @@ const products = [
         btnText: "Add to Cart",
     },
     {
-        key: uuidv4(),
+        key: 104,
         imageSrc: "https://bit.ly/3oCL2kn",
         imageAlt: "HIGHLANDER",
         title: "HIGHLANDER",
@@ -54,7 +52,7 @@ const products = [
         btnText: "Add to Cart",
     },
     {
-        key: uuidv4(),
+        key: 105,
         imageSrc: "https://bit.ly/2Sc3EvD",
         imageAlt: "Canary London",
         title: "Canary London",
