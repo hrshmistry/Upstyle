@@ -1,5 +1,5 @@
 nav {
-    background-color: #1D4354;
+    background-color: var(--primary-color);
     color: #FFF;
 }
 
@@ -10,6 +10,7 @@ nav {
     align-items: center;
     height: 70px;
     margin-inline: auto;
+    padding-inline: 1rem;
 }
 
 .navigation .brand {
