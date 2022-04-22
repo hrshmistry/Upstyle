@@ -1,8 +1,41 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
+import { CartState } from '../../context/Context';
+import CartProduct from '../../components/ProductCard/CartProduct';
+import './Cart.css'
+import { Link } from 'react-router-dom';
 
 const Cart = () => {
+    const { state: { cart } } = CartState();
+    const [total, setTotal] = useState(0);
+
+    useEffect(() => {
+        setTotal(cart.reduce((acc, product) => acc + Number(product.prize), 0))
+    }, [cart])
+
     return (
-        <div>Cart</div>
+        <div className="cart">
+            {cart.length === 0
+                ? (
+                    <div className="cart-empty">
+                        <h3>Your cart is empty</h3>
+                        <p>
+                            You can add products to your cart by clicking on the "Add to Cart" button on the
+                            {" "}<Link to={"/"}>Product Page</Link>
+                        </p>
+                    </div>
+                )
+                : (
+                    <>
+                        {cart.map((product) => {
+                            return (<div key={product.key}>
+                                <CartProduct product={product} />
+                            </div>)
+                        })
+                        }
+                    </>
+                )
+            }
+        </div>
     )
 }
 

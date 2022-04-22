@@ -1,14 +1,12 @@
-import React, { useContext } from 'react'
+import React from 'react'
 import './ProductCard.css'
-import { CartState, CartContext } from "../../context/Context"
+import { CartState } from "../../context/Context"
 
 const ProductCard = ({ product }) => {
     const {
         state: { cart },
         dispatch
     } = CartState();
-
-    console.log("cart", cart);
 
     const addToCart = () => dispatch({
         type: "ADD_TO_CART",
@@ -39,7 +37,7 @@ const ProductCard = ({ product }) => {
             </div>
             {cart.some(item => item.key === product.key) ? (
                 <button
-                    className="btn btn-primary e-comm-btn"
+                    className="btn btn-primary e-comm-btn remove-btn"
                     onClick={removeFromCart}
                 >
                     Remove from Cart
