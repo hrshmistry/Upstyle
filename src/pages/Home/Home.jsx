@@ -1,11 +1,11 @@
 import React from 'react'
 import ProductCard from '../../components/ProductCard/ProductCard'
-import { CartState } from '../../context/Context';
+import { useCart } from '../../context/Context';
 import "./Home.css"
 
 const Home = () => {
 
-    const { state: { products } } = CartState();
+    const { state: { products } } = useCart();
 
     return (
         <div className="home">

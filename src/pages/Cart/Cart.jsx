@@ -1,11 +1,11 @@
 import React, { useEffect, useState } from 'react'
-import { CartState } from '../../context/Context';
+import { useCart } from '../../context/Context';
 import CartProduct from '../../components/ProductCard/CartProduct';
 import './Cart.css'
 import { Link } from 'react-router-dom';
 
 const Cart = () => {
-    const { state: { cart } } = CartState();
+    const { state: { cart } } = useCart();
     const [total, setTotal] = useState(0);
 
     useEffect(() => {

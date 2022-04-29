@@ -3,10 +3,10 @@ import React from 'react'
 import { Link } from 'react-router-dom'
 import './Navbar.css'
 import SearchBar from '../SearchBar'
-import { CartState } from "../../context/Context";
+import { useCart } from "../../context/Context";
 
 const Navbar = () => {
-    const { state: { cart } } = CartState();
+    const { state: { cart } } = useCart();
 
     return (
         <nav>

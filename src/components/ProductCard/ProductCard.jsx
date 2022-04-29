@@ -1,23 +1,23 @@
 import React from 'react'
 import './ProductCard.css'
-import { CartState } from "../../context/Context"
+import { useCart } from "../../context/Context"
 import { Link } from 'react-router-dom';
 
 const ProductCard = ({ product }) => {
     const {
         state: { cart },
         dispatch
-    } = CartState();
+    } = useCart();
 
     const addToCart = () => dispatch({
         type: "ADD_TO_CART",
         payload: product
     })
 
-    const removeFromCart = () => dispatch({
-        type: "REMOVE_FROM_CART",
-        payload: product.key
-    })
+    // const removeFromCart = () => dispatch({
+    //     type: "REMOVE_FROM_CART",
+    //     payload: product.key
+    // })
 
     return (
         <div className="card e-comm-card m-1">

@@ -1,11 +1,11 @@
 import React from 'react'
 import './ProductCard.css'
-import { CartState } from "../../context/Context"
+import { useCart } from "../../context/Context"
 
 const CartProduct = ({ product }) => {
     const {
         dispatch
-    } = CartState();
+    } = useCart();
 
     const removeFromCart = () => dispatch({
         type: "REMOVE_FROM_CART",
