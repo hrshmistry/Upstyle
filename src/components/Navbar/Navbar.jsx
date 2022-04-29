@@ -15,9 +15,11 @@ const Navbar = () => {
                 <SearchBar />
                 <Link to={"/cart"} className='cart-container n-3'>
                     <ShoppingCart size={32} />
-                    <div className='badge'>
-                        <span>{cart.length}</span>
-                    </div>
+                    {cart.length > 0 &&
+                        <div className='badge'>
+                            <span>{cart.length}</span>
+                        </div>
+                    }
                 </Link>
             </div>
         </nav>
