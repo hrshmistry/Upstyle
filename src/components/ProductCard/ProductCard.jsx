@@ -1,6 +1,7 @@
 import React from 'react'
 import './ProductCard.css'
 import { CartState } from "../../context/Context"
+import { Link } from 'react-router-dom';
 
 const ProductCard = ({ product }) => {
     const {
@@ -35,16 +36,23 @@ const ProductCard = ({ product }) => {
                 <small className="e-comm-price-cut">Rs.{product.prizeCut}</small>
                 <small className="e-comm-disc"> ({product.discount}% OFF)</small>
             </div>
-            {cart.some(item => item.key === product.key) ? (
-                <button
+            {/* <button
                     className="btn btn-primary e-comm-btn remove-btn"
                     onClick={removeFromCart}
                 >
                     Remove from Cart
-                </button>
+                </button> */}
+            {cart.some(item => item.key === product.key) ? (
+                <Link to={"/cart"} className="go-to-cart">
+                    <button
+                        className="btn btn-primary e-comm-btn btn-go"
+                    >
+                        Go to Cart
+                    </button>
+                </Link>
             ) : (
                 <button
-                    className="btn btn-primary e-comm-btn"
+                    className="btn btn-primary e-comm-btn btn-pro"
                     onClick={addToCart}
                 >
                     Add to Cart
