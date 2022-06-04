@@ -8,6 +8,7 @@ const CartProvider = ({ children }) => {
     const [state, dispatch] = useReducer(cartReducer, {
         products,
         cart: [],
+        wishlist: []
     })
 
     return (

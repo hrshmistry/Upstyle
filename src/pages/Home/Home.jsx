@@ -12,14 +12,16 @@ const Home = () => {
 
   useEffect(() => {
     setTimeout(() => {
-      setIsLoading(!isLoading);
-    }, 3000);
+      setIsLoading(false);
+    }, 2000);
   }, []);
 
   return (
     <div className="home">
       {isLoading ? (
-        <BeatLoader color="#1D4354" loading={isLoading} size={20} />
+        <div className="center-item">
+          <BeatLoader color="#1D4354" loading={isLoading} size={20} />
+        </div>
       ) : (
         products.map((product) => {
           return (

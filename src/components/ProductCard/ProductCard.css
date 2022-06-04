@@ -7,6 +7,22 @@
     background-color: #F9FAFB;
     border-radius: 0.2rem;
     box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 3px 0px, rgba(0, 0, 0, 0.06) 0px 1px 2px 0px;
+    position: relative;
+}
+
+.add-to-wishlist {
+    position: absolute;
+    top: 0.3rem;
+    right: 0.3rem;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 3px 0px, rgba(0, 0, 0, 0.06) 0px 1px 2px 0px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #F9FAFB;
+    width: 1.8rem;
+    height: 1.8rem;
+    border-radius: 50%;
+    cursor: pointer;
 }
 
 .cart-card {
@@ -90,10 +106,13 @@
     flex-direction: column;
     justify-content: space-between;
     padding: 1rem;
+    width: 100%;
 }
+
 .cart-part button {
   margin: 0;
-  width: fit-content;
+  width: 100%;
+  max-width: 200px;
 }
 
 .e-comm-content {
@@ -147,6 +166,7 @@
 
 .btn-go {
     background-color: var(--primary-color);
+    opacity: 0.85;
     color: white;
 }
 
@@ -178,4 +198,8 @@
     color: white;
     border: none;
     transition: all 0.2s ease-in-out;
+}
+
+.move-cart-btn {
+    margin: .5rem 0 !important;
 }

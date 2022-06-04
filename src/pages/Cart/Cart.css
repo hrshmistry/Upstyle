@@ -15,16 +15,23 @@
 
 .cart-empty {
     display: flex;
+    max-width: 500px;
+    margin-inline: auto;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     text-align: center;
     color: #334155;
-    padding: 2rem 1rem;
-    gap: 0.5rem;
+    padding: 3rem;
+    gap: 1rem;
 }
 
 .cart-empty a {
     color: #334155;
     font-weight: 600;
+}
+
+.cart-empty img {
+    max-width: 280px;
+    width: 100%;
 }

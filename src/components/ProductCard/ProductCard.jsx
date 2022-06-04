@@ -2,6 +2,7 @@ import React from 'react'
 import './ProductCard.css'
 import { useCart } from "../../context/cartContext"
 import { Link } from 'react-router-dom';
+import { HeartStraight } from 'phosphor-react';
 
 const ProductCard = ({ product }) => {
     const {
@@ -14,8 +15,26 @@ const ProductCard = ({ product }) => {
         payload: product
     })
 
+    const addToWishlist = () => dispatch({
+        type: "ADD_TO_WISHLIST",
+        payload: product
+    })
+
+    const removeFromWishlist = () => dispatch({
+        type: "REMOVE_FROM_WISHLIST",
+        payload: product.key
+    })
+
     return (
         <div className="card e-comm-card m-1">
+            <div className='add-to-wishlist'>
+                <HeartStraight
+                    onClick={product?.inWishlist ? removeFromWishlist : addToWishlist}
+                    color="#143240"
+                    size={20}
+                    weight={product?.inWishlist ? "fill" : "regular"}
+                />
+            </div>
             <img className="img-card" src={product.imageSrc} alt={product.imageAlt} />
             {product.isBadge &&
                 <small className="e-comm-badge solid-badge e-comm-badge">
@@ -31,12 +50,6 @@ const ProductCard = ({ product }) => {
                 <small className="e-comm-price-cut">Rs.{product.prizeCut}</small>
                 <small className="e-comm-disc"> ({product.discount}% OFF)</small>
             </div>
-            {/* <button
-                    className="btn btn-primary e-comm-btn remove-btn"
-                    onClick={removeFromCart}
-                >
-                    Remove from Cart
-                </button> */}
             {cart.some(item => item.key === product.key) ? (
                 <Link to={"/cart"} className="go-to-cart">
                     <button

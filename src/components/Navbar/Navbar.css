@@ -26,13 +26,18 @@ nav {
 }
 
 .navigation .brand {
-    font-size: 1.5rem;
+    font-size: 1.8rem;
     color: #FFF;
     text-decoration: none;
 }
 
 .search-bar {
     width: 50%;
+}
+
+.nav-icons {
+    display: flex;
+    gap: 1rem;
 }
 
 .search-bar form {
@@ -69,8 +74,8 @@ nav {
     right: -5px;
     color: #1D4354;
     background-color: #FFF;
-    width: 1.2rem;
-    height: 1.2rem;
+    width: 1rem;
+    height: 1rem;
     display: flex;
     justify-content: center;
     align-items: center;

@@ -2,22 +2,22 @@ import React from 'react'
 import './ProductCard.css'
 import { useCart } from "../../context/cartContext"
 
-const CartProduct = ({ product }) => {
+const WishlistProduct = ({ product }) => {
     const {
         dispatch
     } = useCart();
 
-    const removeFromCart = () => dispatch({
-        type: "REMOVE_FROM_CART",
+    const removeFromWishlist = () => dispatch({
+        type: "REMOVE_FROM_WISHLIST",
         payload: product.key
     })
 
-    const moveToWishlist = () => {
+    const moveToCart = () => {
         dispatch({
-            type: "ADD_TO_WISHLIST",
+            type: "ADD_TO_CART",
             payload: product
         });
-        removeFromCart();
+        removeFromWishlist();
     }
 
     return (
@@ -43,19 +43,19 @@ const CartProduct = ({ product }) => {
                 </div>
                 <button
                     className="btn btn-primary e-comm-btn remove-btn move-cart-btn"
-                    onClick={moveToWishlist}
+                    onClick={moveToCart}
                 >
-                    Move to Wishlist
+                    Move to Cart
                 </button>
                 <button
                     className="btn btn-primary e-comm-btn remove-btn"
-                    onClick={removeFromCart}
+                    onClick={removeFromWishlist}
                 >
-                    Remove from Cart
+                    Remove from Wishlist
                 </button>
             </div>
         </div>
     )
 }
 
-export default CartProduct
+export default WishlistProduct

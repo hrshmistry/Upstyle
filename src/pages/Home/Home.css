@@ -6,7 +6,7 @@
 
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-  grid-gap: 3rem 3rem;
+  grid-gap: 1rem 1rem;
   place-items: center;
 }
 
@@ -21,4 +21,11 @@
     grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
     grid-gap: 1rem 0.5rem;
   }
+}
+
+.center-item {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: calc(100vh - 70px);
 }
