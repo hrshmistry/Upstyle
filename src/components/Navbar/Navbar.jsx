@@ -3,7 +3,7 @@ import React from 'react'
 import { Link } from 'react-router-dom'
 import './Navbar.css'
 import SearchBar from '../SearchBar'
-import { useCart } from "../../context/Context";
+import { useCart } from "../../context/cartContext";
 
 const Navbar = () => {
     const { state: { cart } } = useCart();
@@ -15,11 +15,9 @@ const Navbar = () => {
                 <SearchBar />
                 <Link to={"/cart"} className='cart-container n-3'>
                     <ShoppingCart size={32} />
-                    {cart.length > 0 &&
                         <div className='badge'>
                             <span>{cart.length}</span>
                         </div>
-                    }
                 </Link>
             </div>
         </nav>
