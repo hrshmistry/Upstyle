@@ -33,6 +33,7 @@ nav {
 
 .search-bar {
     width: 50%;
+    position: relative;
 }
 
 .nav-icons {
@@ -40,15 +41,16 @@ nav {
     gap: 1rem;
 }
 
-.search-bar form {
+.search-bar-form {
     width: 100%;
     border-radius: 0.2rem;
-    padding: 0rem 0.8rem;
+    padding: 0 0.2rem 0 0.8rem;
     background-color: #FFF;
     display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: center;
+    gap: 0.5rem;
 }
 
 .search-bar input {
@@ -56,7 +58,17 @@ nav {
     border: none;
     outline: none;
     padding: 0.5rem;
-    font-size: 1rem;
+    font-size: 0.85rem;
+}
+
+.search-bar input:focus search-bar-form{
+    background-color: grey;
+}
+
+.search-shortcut {
+    color: var(--primary-color);
+    opacity: 0.85;
+    font-weight: 600;
 }
 
 .cart-container {

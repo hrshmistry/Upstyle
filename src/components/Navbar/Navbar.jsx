@@ -11,7 +11,7 @@ const Navbar = () => {
     return (
         <nav>
             <div className='navigation'>
-                <Link to={"/"} className='brand n-1'>QuickBuy<small style={{ fontSize: 'small' }}>.com</small></Link>
+                <Link to={"/"} className='brand n-1'>Upstyle</Link>
                 <SearchBar />
                 <div className='nav-icons'>
                     <Link to={"/wishlist"} className='cart-container n-3'>

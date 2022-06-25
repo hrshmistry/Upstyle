@@ -1,4 +1,4 @@
-import React, { createContext, useContext, useReducer } from 'react'
+import React, { createContext, useContext, useReducer, useRef } from 'react'
 import { cartReducer } from '../reducer/cartReducer';
 import products from '../products';
 
@@ -11,8 +11,10 @@ const CartProvider = ({ children }) => {
         wishlist: []
     })
 
+    const inputRef = useRef(null);
+
     return (
-        <CartContext.Provider value={{ state, dispatch }}>
+        <CartContext.Provider value={{ state, dispatch, inputRef }}>
             {children}
         </CartContext.Provider>
     )
